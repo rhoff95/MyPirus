@@ -207,3 +207,16 @@ def get_daily_mock():
                  '5. Time Zone': 'US/Eastern'}
 
     return data, meta_data
+
+
+def get_global_quote_mock():
+    return ({'01. symbol': 'GOOGL',
+            '02. open': '1089.1000',
+            '03. high': '1101.2000',
+            '04. low': '1088.2000',
+            '05. price': '1093.8900',
+            '06. volume': '988491',
+            '07. latest trading day': '2019-06-17',
+            '08. previous close': '1086.3000',
+            '09. change': '7.5900',
+            '10. change percent': '0.6987%'}, None)

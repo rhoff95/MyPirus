@@ -1,15 +1,13 @@
 import mock
 
-symbol = 'GOOGL'
+kSymbol = '01. symbol'
+kPrice = '05. price'
+kChangePercent = '10. change percent'
 
-data, meta_data = mock.get_daily_mock()
+quote, ignore = mock.get_global_quote_mock()
 
+symbol = quote[kSymbol]
+price = quote[kPrice]
+changePercent = quote[kChangePercent]
 
-data_day = data['2019-06-14']
-
-data_day_open = data_day['1. open']
-
-
-print(symbol + ' Open @ $' + data_day_open)
-
-
+print("{:4.4s} {:^4.4s} {:4.4s}".format(symbol, str(price), str(changePercent)))
